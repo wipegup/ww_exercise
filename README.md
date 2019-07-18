@@ -1,5 +1,40 @@
 # Word Watch 👀
 
+## Process
+1. Try to fix vulnerabilities:
+- Timebox efforts
+- Run `npm audit fix` ; Try to add dependencies, Break stuff
+- Start over, run `npm audit fix`, stick with that to move onto JS code
+2. Look at code
+- Try to decipher comments within `docs/bundle.js`
+- Find `src/index.js`
+- Make simple `JQuery` call work
+- Select elements, navigate through parents/children
+- Try simple `ajax` request,
+3. Write code
+a. Build `get` request for top word
+- Hit endpoint in `Postman`
+- Hit endpoint with `$.ajax`
+- Parse return within `$.ajax` success function
+- Build function to display results
+b. Build `post` request for input string
+- Hit endpint in `Postman`
+- Hit endpoint with `$.ajax`
+- Figure out `JQuery` "on-click" function
+- Figure out parsing string into words
+- Build callback function for "on-click" combining post with `ajax`, string parsing, loop
+
+Deploy
+- Try from `master` branch
+- Try from `gh-pages` branch
+- Try from `master/docs` branch
+- Try adding `JQery` to index page
+- Wait...
+- Something ended up working.
+
+Deployed at https://wipegup.github.io/ww_exercise/
+
+
 > Seeing is believing...
 
 Today, your task is to bring Word Watch👀 to life! Find the API docs [here](https://github.com/turingschool-examples/word-watch-api). Essentially, you have two user stories:
@@ -17,13 +52,13 @@ If you finish these two user stories, consider:
 
 ## Workflow
 
-Fork or clone this so you have your own Word Watch Repo. 
+Fork or clone this so you have your own Word Watch Repo.
 
 You should commit as you normally would - when a new piece of functionality is built out and everything is clean and working. This should be an independent challenge, but we don't want you banging your head against the wall all morning. If you are stuck on setup or something weird, don't spend too long before you reach out to an instructor - we can get you going in the right direction. The point of this is not to frustrate you!
 
 ## Submission
 
-Please DM Dione and Cory with your finished repo by noon to show us your 🔥awesome🔥 apps. By that time, please have your project deployed to GitHub pages. Also, if you did run the API locally and were hitting that, please change the URL to the Heroku endpoints so it's easier for instructors to check real quick. 
+Please DM Dione and Cory with your finished repo by noon to show us your 🔥awesome🔥 apps. By that time, please have your project deployed to GitHub pages. Also, if you did run the API locally and were hitting that, please change the URL to the Heroku endpoints so it's easier for instructors to check real quick.
 
 ## Environment Setup
 
@@ -75,4 +110,4 @@ npm test
 ## Word Watch API
 
 * Documentation can be found [here](https://github.com/turingschool-examples/word-watch-api)
-* You can choose if you want to use ther Heroku API, or run the API locally. If you are using the Heroku API, remember that a lot of other students may be as well, so you'll have less control over if that top word is changing, etc. 
+* You can choose if you want to use ther Heroku API, or run the API locally. If you are using the Heroku API, remember that a lot of other students may be as well, so you'll have less control over if that top word is changing, etc.
