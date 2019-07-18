@@ -15,11 +15,33 @@ function getTopWord(){$.ajax({
   success: displayTopWord
 })};
 
+async function postWordList(event){
+  var wordList = $('textarea').val().split(" ")
+  var url = "https://wordwatch-api.herokuapp.com/api/v1/words"
+  const successFunc = function(response){console.log(response)}
+
+  for( var word of wordList){
+    if(word != ""){
+      var data = {word: {value:word}}
+
+      await $.ajax({
+        type:"POST",
+        url: url,
+        data: data,
+        success: successFunc,
+      });
+    }
+  }
+
+  await getTopWord()
+  console.log("POST DONE");
+}
+
 $(document).ready( () => {
 
   getTopWord();
 
-  // $('button').on('click', postWordList)
+  $('button').on('click', postWordList)
   // have fun!
 
 
